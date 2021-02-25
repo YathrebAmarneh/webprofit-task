@@ -12,6 +12,8 @@ const companyName = document.getElementsByClassName('companyName')[0]
 const companyWebsite = document.getElementsByClassName('companyWebsite')[0]
 const jobTitle = document.getElementsByClassName('jobTitle')[0]
 
+const user = [firstName, lastName, email, phoneNumber, companyName, companyWebsite, jobTitle];
+
 
 //////////////////// drop-down-menu
    
@@ -36,23 +38,25 @@ function showblock() {
 }
 
 
-
+//Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking
 firstName.onblur = function(e) {
-const valName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+const valName = /^[a-z ,.'-]+$/i;
 
    if(!valName.test(e.target.value)) {
       firstName.classList.add('err')
    } else {
-      firstName.classList.add('corr')
+      firstName.classList.remove('err')
    }
 }
 
 
 lastName.onblur = function(e) {
-const valName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+const valName = /^[a-z ,.'-]+$/i;
 
    if(!valName.test(e.target.value)) {
       lastName.classList.add('err')
+   } else {
+      lastName.classList.remove('err')
    }
 }
 
@@ -62,6 +66,8 @@ email.onblur = function(e) {
    
       if(!valEmail.test(e.target.value)) {
          email.classList.add('err')
+      } else {
+         email.classList.remove('err')
       }
    }
 
@@ -70,14 +76,18 @@ const valPhoneNumber = /^\d{10}$/;
    
    if(!valPhoneNumber.test(e.target.value)) {
       phoneNumber.classList.add('err')
+   } else {
+      phoneNumber.classList.remove('err')
    }
 }
 
 companyName.onblur = function(e) {
-const valcompanyName = /^\d{10}$/;
+const valcompanyName = /^[a-z ,.'-]+$/i;
       
    if(!valcompanyName.test(e.target.value)) {
       companyName.classList.add('err')
+   } else {
+      companyWebsite.classList.remove('err')
    }
 }
 
@@ -86,14 +96,18 @@ const valcompanyWebsite = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256
          
    if(!valcompanyWebsite.test(e.target.value)) {
       companyWebsite.classList.add('err')
+   } else {
+      companyWebsite.classList.remove('err')
    }
 }
 
 jobTitle.onblur = function(e) {
-   const valjobTitle = /^[a-zA-Z]+ [a-zA-Z]+$/;
+   const valjobTitle = /^[a-z ,.'-]+$/i;
             
       if(!valjobTitle.test(e.target.value)) {
          jobTitle.classList.add('err')
+      } else {
+         jobTitle.classList.remove('err')
       }
    }
 

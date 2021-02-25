@@ -17,16 +17,17 @@ body{
 .header-navbar {
     justify-content: center;
     position: relative;
-    padding-top: 260px;
+    padding-top: 20%;
     display: block;
     margin-right: -40px;
     margin-top: 35px;
     margin-bottom: -80px;
+    z-index: 5;
 }
 
 .header-navbar .logo img {
-    height: 32.24px;
-    width: 156px;
+    height: 21%;
+    width: 21%;
     cursor: pointer;
     position: absolute;
     top:20%;
@@ -142,10 +143,21 @@ body{
 }
 
 .two{
+    position: absolute;
+    left: 500%;
     margin-top: 50px;
-    margin-left: 500px;
+    margin-left: 10%;
     text-align: center;
     width: 210.52px;
+}
+
+.section-2{
+    position: relative;
+}
+
+.section-2 button{
+    position: absolute;
+    left: 30%;
 }
 
 /* section-1-index /////////////////////////////////////////// */
@@ -158,41 +170,16 @@ body{
     color: #fff;
     margin-top: 80px;
     position: relative;
+    animation-duration: 1s;
+
 }
 
 /* slideshowwwwwwwwwwwwwwwwwwwwwwwwww */
 
-.section-2 button{
-    position: absolute;
-    left: 6%;
-}
-
-.w3-left, .w3-right {
-    cursor:pointer
-}
-
-.w3-left{
-    position: absolute;
-    left:5%;
-    top:50%;
-    background-color: gray;
-    width: 30px;
-    height: 30px;
-}
-
-.w3-right{
-    position: absolute;
-    right: 5%;
-    top:50%;
-    background-color: gray;
-    width: 30px;
-    height: 30px;
-}
-
-.w3-center ul li {
-
-    list-style: none;
-
+.slideholder{
+    transition-delay:1s; 
+animation-fill-mode: both;
+animation-name: none;
 }
 
 .w3-center ul li button {
@@ -215,6 +202,7 @@ body{
     margin-bottom: 50px;
 }
 
+/*Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover*/
 .w3-center ul li button:hover {
 
     background-color: black;
@@ -225,153 +213,193 @@ body{
 
     background-color: black;
 }
-    
-.section-1 .slide-show .slide-holder{
-    display: none;
-    position: relative;
-    font-family: var(--c-font);
-}
+
+/*Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover Dots hover*/
 
 .section-1 .slide-show .w3-center{
 
     position: absolute;
-    bottom:10%
+    bottom:15%;
+    left: 35%;
 }
 
 .section-1 ul {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-gap: 0;
-    width:440px;
-    position:absolute;
-    bottom:10%;
-    left: 35%;
-    cursor: pointer;
+    width:33%;
 }
 
-.section-1 ul li{
+.w3-center ul li {
+
+    list-style: none;
     font-size: 55px;
     color: white;
+
 }
 
-.section-1 .slide-show div h3:first-child{
+.sub1{
+    width: 30%;
     position: absolute;
-    top: 10%;
-    left:7%;
+    left: 8%;
+    top:15%;
+    /* background-color: var(--primary-color); */
+}
+
+.sub2{
+    width: 50%;
+    position: absolute;
+    left: 40%;
+    top:15%;
+    /* background-color: var(--primary-color); */
+}
+
+
+@media (max-width: 767px) {  /*mediaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+    .sub1{
+        width: 90%;
+        position: absolute;
+        left: 2%;
+        top:8%;
+        display: inline-block;
+     
+    }
+    
+    .sub2{
+        width: 90%;
+        position: absolute;
+        left: 2%;
+        top:35%;
+        display: inline-block;
+        
+    }
+
+    /* .w3-left{
+        position: absolute;
+        left:5%;
+        top:35%;   
+    }
+    
+    .w3-right{
+        position: absolute;
+        right: 5%;
+        top:35%;
+    }
+
+    .w3-center ul{
+
+        position: absolute;
+        right: 50%;
+        top:50%;
+
+    } */
+    
+}
+
+/*sub1*/
+
+.w3-left, .w3-right {
+    cursor:pointer
+}
+
+.w3-left{
+    position: absolute;
+    left:5%;
+    top:35%;
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+}
+
+.w3-right{
+    position: absolute;
+    right: 5%;
+    top:35%;
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+}
+
+.sub1 h3{
+    
     font-style: italic;
-    font-size: 44px;
+    font-size: 250%;
     line-height: 1.25em;
     font-family: Cambria;
     font-weight: normal;
-    margin-left: 80px;
-    margin-top: 100px;
+    padding-left:10%;
+    padding-top: 10%;
+    padding-bottom: 15%;
 }
 
-.section-1 .slide-show div h3:nth-child(2){
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    font-size: 28px;
+.sub1 h6{
+
+    font-size: 120%;
+    font-weight: bold;
+    font-family: var(--c-font);
+    padding-left:10%;
+}
+
+/*sub2*/
+
+.sub2 h3{
+
+    font-size: 180%;
     line-height: 1.33em;
     font-family: var(--c-font);
     font-weight: 600;
-    margin-top: 110px;
+    padding-top: 10%;
+    padding-left:10%;
+    padding-bottom: 10%;
 }
 
-.section-1 .slide-show div h6{
-    position: absolute;
-    top: 70% ;
-    left: 7%;
-    font-size: 20px;
-    margin-left: 80px;
-    margin-top: 450px;
-    font-weight: bold;
-}
-
-.section-1 .slide-show div img{
-    position: absolute;
-    top: 70% ;
-    left: 50%;
-    width: 170px;
+.sub2 img{
+    
+    width: 200px;
     height: 60px;
-    margin-top: 450px;
-}
-
-
-/* div-666666 */
-
-.section-1 .slide-show .div-6 h6{
-    position: absolute;
-    top: 70% ;
-    left: 7%;
-    font-size: 20px;
-    margin-left: 80px;
-    margin-top: 650px;
-    font-weight: bold;
+    padding-left:8%;
 }
 
 .quotes{
-    width: 200px;
+    width: 15%;
     position: absolute;
-    left: 10%;
+    left: 4%;
+    top:12%
 }
 
-.section-1 .slide-show .div-6 img{
-    position: absolute;
-    top: 70%;
-    left: 45%;
-    width: 170px;
-    height: 60px;
-    margin-top: 650px;
-}
-
-/* div-88888 */
-.section-1 .slide-show .div-8 h6{
-    position: absolute;
-    top: 70% ;
-    left: 7%;
-    font-size: 20px;
-    margin-left: 80px;
-    margin-top: 550px;
-    font-weight: bold; 
-}
-
-.section-1 .slide-show .div-8 img{
-    position: absolute;
-    top: 70%;
-    left: 55%;
-    width: 170px;
-    height: 60px;
-    margin-top: 530px;
-}
-
-/*Footer*/
+/*Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer*/
 
 .footer{
-    width:100%;
     position: relative;
     padding: 90px 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
 }
 
 .contact-footer{
     background-color: black;
+    position: absolute;
+    top:350%;
+    width: 180%;
 }
 
 .contact-footer p{
     color: white;
 }
 
+.contact-footer a{
+    color: white;
+}
+
 .footer img{
-    width:44px; 
-    height:22.83px;
+    width:6%; 
     position: absolute;
     left:5% ;
-    display: block;
 }
 
 .contact-footer img{
-    width:66px;
-    height:44.83px ;  
+    width:6%; 
     position: absolute;
     bottom: 40%;
 }
@@ -379,7 +407,8 @@ body{
 .footer p{
     font-family: var(--c-font);
     position: relative;
-    left: 55%;
+    left: 57%;
+    margin-top: 1%;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.55em;
@@ -409,153 +438,79 @@ body{
     margin-bottom: 25px;
 }
 
-.section-1-contact{
+/*section-1-contact section-1-contact section-1-contact section-1-contact section-1-contact section-1-contact section-1-contact*/
+
+
+
+.home-page-content{
     position: relative;
-    padding: 10px;
-    margin-top: -50px;
-    margin-bottom: 1000px;
 }
 
-.section-1-contact h1{
-    font-size: 70px;
-    line-height: 1.13em;
-    font-family: var(--c-font);
-    font-weight: 700;
-    margin-top: 0px;
-    position: absolute;
-    top:30%
-}
-
-.fill-form-text .span4{
-    display: block;
-}
-
-.section-1-contact h4{
-    font-size: 20px;
-    font-family: var(--c-font);
-    line-height: 1.4em;
-    font-weight: bold;
-    margin-top: 220px;
+.section-1-contact{
+   position: absolute;
+   top:5%;
 }
 
 .fill-form-text{
-    position: absolute;
-    top:40%;
-    left: 5%;
+
+    margin-top: 30%;
+    margin-left: 7%;
+    width: 50%;
 }
 
-.section-1-contact .contact-info{
-
-    position: absolute;
-    top:2000%;
-    left: 4%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+.fill-form-text h1{   /*ok*/
+    font-size: 348%;
+    line-height: 1.5em;
     font-family: var(--c-font);
+    font-weight: 900;
+}
+
+.fill-form-text h4{   /*ok*/
+    font-size: 138%;
+    font-family: var(--c-font);
+    line-height: 1.4em;
     font-weight: bold;
-    line-height: 1.55em;
+    margin-top: 7%;
 }
 
-.section-1-contact .contact-info h5{
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.section-1-contact .contact-info p{
-    margin-bottom: 30px;
-} 
-
-.section-1-contact form{
+.section-1-contact form{   /*ok*/
     position: absolute;
-    top:25%;
-    right:3%;
-    width:700px;
-    height:1012.67px;
-    margin-right: 20px;
-    box-shadow: 10px 10px -10px -10px grey;
-    margin-bottom: 50px;
-    box-shadow: 20px 20px 50px #888888;
-    padding: 90px 120px;
-}
-/* W                                     WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwww */
-.section-1-contact .form-content{
-
-    position: absolute;
-    left: 1%;
-
+    left:65%;
+    top:36%;
+    width:81%;
+    height:237%;     /*hok*/
+    box-shadow: 0px 6px 43px 0px rgb(0 0 0 / 31%);
+    padding: 7% 5%;
 }
 
-.section-1-contact fieldset{
+
+/*fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1 fieldset1*/
+
+.fieldset1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border: none;
-    padding-bottom: 20px;
-    margin-left:-155px ;
+    margin-top: 5%;
 }
 
-.section-1-contact form fieldset div{
-    margin-right: 10px;
-    margin-bottom: 20px;
+.fieldset1 div{  /*will back*/
+    margin-left: 10%;
+    margin-bottom: 18%;
 }
 
-.section-1-contact form div:nth-child(odd){
+.fieldset1 div:nth-child(odd){
 
-    margin-left: 110px;
-
-}
-
-.section-1-contact form div:nth-child(even){
-
-    margin-left: 40px;
+    margin-left: 9%;
 
 }
 
-.section-1-contact form input,select{
-    height:61px;
-    width:258px;   
-}
+.fieldset1 div:nth-child(even){
 
-.inputx{
-    border: solid 1px var(--primary-color);
-}
-
-.section-1-contact form select{
-
-    font-weight: bold;
-    font-family: var(--c-font);
+    margin-left: 5%;
 
 }
 
-.section-1-contact form .star{
-    color: red;
-}
-
-
-.section-1-contact form textarea{
-    width:570px;
-    height:140px;
-    margin-left: -85px;
-}
-
-.section-1-contact form .textarea{
-    margin-left: -80px;
-}
-
-
-.section-1-contact form fieldset select option{
-    font-family: var(--c-font);
-    font-weight: bold;
-}
-
-.section-1-contact form [type="submit"]{
-    display: block;
-    margin: 10px -45px 0;
-    width: 570px;;
-}
-
-.section-1-contact label{
+.fieldset1 div label{
     font-size: 18px;
     display: block;
     font-weight: 700;
@@ -563,33 +518,68 @@ body{
     font-family: var(--c-font);
 }
 
-.section-1-contact p[class="privacy"]{
-    margin-top: 35px;
-    text-align: center;
-    color: #eae9e7;
+.fieldset1 div label .star{
+    color: red;
+}
+
+.fieldset1 input,select{
+    height:116%;
+    width:94%;   
+}
+
+.fieldset1 select{
+
+    font-weight: bold;
     font-family: var(--c-font);
-    font-weight: 600;
-    position: absolute;
-    top:4500%;
-    right: 25%;
 }
 
-.section-1-contact .terms{
-
-    position: absolute;
-    bottom:-4490%;
-    right: 22%;
-    box-shadow: 5px 5px 8px 2px #888888;
+.fieldset1 select option{
+    font-family: var(--c-font);
+    font-weight: bold;
 }
 
-.section-1-contact .terms div{
+/*fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2 fieldset2*/
+
+.fieldset2{
+    border: none;
+    margin-left: 5%;
+}
+
+.fieldset2 textarea{
+    width:97%;
+    height:140px;
+    margin-top: 3%;
+    
+}
+
+.fieldset2 .textarea{
+    font-weight: bold;
+    font-family: var(--c-font);
+}
+
+.fieldset2 input[type="submit"]{
+    display: block;
+    width: 97%;
+    margin-top: 4%;
+}
+
+.fieldset2 .terms{
+
+    /* box-shadow: 5px 5px 8px 2px #888888; */
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 26%;
+
+}
+.fieldset2 .terms div{
 
     display: inline-block;
     background-color: #1E90FF;
     color: white;
     font-family: var(--c-font);
     height: 60px;
-    width: 200px;
+    width:51%;
     text-align: center;
     padding-top: 20px;
 }
@@ -598,43 +588,79 @@ body{
 
     width:60px;
     height:60px;
-    margin-bottom: -10px;
 }
 
-.contact-info .melbourne p span{
-
-    display: block;
+.fieldset2 p[class="privacy"]{
+    margin-top: 35px;
+    text-align: center;
+    color: #cacaca;
+    font-family: var(--c-font);
+    font-weight: 600;
 }
 
-.contact-info .sydney p span{
 
-    display: block;
+/*Sydney and Melbourn Sydney and Melbourn Sydney and Melbourn Sydney and Melbourn Sydney and Melbourn Sydney and Melbourn*/
+
+.contact-info{
+
+    position: absolute;
+    top:140%;
+    left: 6%;
+    display: flex;
+    flex-direction: row;
+    line-height: 1.55em;
 }
+
+.contact-info h5{
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: var(--c-font);
+    line-height: 1.55em;
+}
+
+.contact-info p{
+    margin-bottom: 30px;
+    line-height: 1.55em;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--c-font);
+} 
+
+.sydney{
+    width: 33%;
+}
+
+.melbourne{
+    width:27%;
+    margin-left: 5%;
+}
+
+/*.section-2-contact .section-2-contact .section-2-contact .section-2-contact .section-2-contact .section-2-contact*/
 
 .section-2-contact{
-    position: relative;
-    margin-left: 500px;
-    padding-top: 150px;
-    padding-bottom: 190px;
+    position: absolute;
+    top:310%;
+    left: 20%;
+   
 }
 
 .section-2-contact h5{
-
-    display: inline; 
+   
     font-weight: bold;
     font-family: var(--c-font);
-    margin-left: -400px;
-    position: absolute;
-    top:50%;
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: -7%;
+    display: inline-block;
 }
 
 .section-2-contact img{
-    position: absolute;
-    top:45%;
-    width: 550px;
+    width: 82%;
+    margin-left: 51%;
+    margin-top: -5%;
 }
 
+/*dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu dropmenu*/
 .dropmenu{
 
     height: 0;  /*make it zero*/
@@ -710,6 +736,7 @@ body{
     height: 50px;
     display:none;
     margin-bottom: 100px;
+    z-index: 5;
 }
 .top2{
     height: 100%;
@@ -764,6 +791,7 @@ body{
     left:60px;
     width: 80%;
     display:none;  
+    z-index: 5;
 }
 .top3{
     height: 100%;
@@ -788,63 +816,112 @@ body{
     background-size: 20px 10px;
 }
 
-.corr{
-    border: 1px solid var(--d-color);
-}
-
-.section-2 button{
-    margin-left: 120px;
-    position: absolute;
-    left: 30%;
-}
-
 /* ///////////////////////media */
 
+     @media (max-width: 1041px){
 
-@media screen and (max-width: 1200px)
- {
+        .footer p{
+            position: relative;
+            left: 45%;
+            font-size: 14px;
+        }
+    
+        .section-1-contact{
+            display: flex;
+            align-items: center;
+        }
 
-    .header-navbar .menu-logo img{
-        width: 58px;
-        height: 40px;
-        position: absolute;
-        top:23%;
-        right: 10%;
-        display: block;
+        .section-1-contact form{   /*ok*/
+            position: absolute;
+            left:8%;
+            top:80%;
+            width:111%;
+            height:280%;     /*hok*/
+        }
+
+        .fill-form-text{
+
+            /* font-size: 19px; */
+            margin-top: 25%;
+            margin-left: 8%;
+            width: 200%;
+            padding-bottom: 8%;
+        }
+
+        .fill-form-text h4{   /*ok*/
+            font-size: 132%;
+            font-family: var(--c-font);
+            line-height: 1.4em;
+            font-weight: unset;
+            margin-top: 2%;;
+            padding-bottom: 10%;
+        }
+
+        
+        .fieldset1 div{  /*will back*/
+            margin-left: 10%;
+            margin-bottom: 18%;
+        }
+        
+        .fieldset1 div:nth-child(odd){
+        
+            margin-left: 9%;
+        }
+        
+        .fieldset1 div:nth-child(even){
+        
+            margin-left: 5%;
+        }
+
+        .contact-info{
+            position: absolute;
+            top:380%;
+            left: 6%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sydney{
+            width: 100%;
+        }
+        
+        .melbourne{
+            width:100%;
+            margin-left: 0;
+        }
+        
+        .section-2-contact{
+            position: absolute;
+            top:490%;
+            left: 20%;
+        }
+
+        .contact-footer{
+            position: absolute;
+            top:520%;
+            left:0
+        }
+
+        .section-2-contact h5{
+            font-weight: bold;
+            font-family: var(--c-font);
+            font-size: 15px;
+            margin-left: -18%;
+            display: inline-block;
+        }
+        
+        .section-2-contact img{
+            width: 60%;
+            margin-right: 51%;
+            margin-top: -5%;
+        }
+
+    .sub1 h3{
+        font-size: 200%;
     }
 
-    .section-1-contact form{
-        width: 100%;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 711px){
-
-    .section-2 button{
-        margin-left: 40px;
-    }
-}
-
-@media (max-width: 1041px){
-
-    .section-2 button{
-        position: absolute;
-        right: 50%;
-        /* background-color: black; */
-    }
-
-    .section-1 .slide-show .div-6 img{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        width: 170px;
-        height: 60px;
-        margin-top: 650px;
-    }
-
-    .section-1 .slide-show div h3:first-child{
-        font-size: 42px;
+    .sub2 h3{
+        font-size: 160%;
     }
 
      .section1 .quotes{
@@ -852,260 +929,81 @@ body{
         position: absolute;
         left: 10%;
     } 
-    
-    .section-1 .slide-show div h3:nth-child(2){
-        font-size: 26px;
-    }
-    
-    .section-1 .slide-show div h6{
-        font-size: 18px;
-    }
-
-    .header-navbar{
+ 
+     .header-navbar{
         display: none;
     }
-
+  
     .head2{
         display: block;
-    } 
-
-    .section-1-contact h1{
-        margin-top: 0px;
-        position: absolute;
-        top:0
-    }
-    
-    .fill-form-text .span4{
-        display: inline-block;
-    }
-    
-    .section-1-contact h4{
-        font-weight: bold;
-        margin-top: 110px;
-        
-    }
-    
-    .fill-form-text{
-        position: absolute;
-        top:0%;
-        left: 8%;
-    
-    } 
-
-    .section-1-contact{
-        position: relative;
-        top:100px;
-        padding: 50px;
-        margin-top: -50px;
-        margin-bottom: 1000px;
-    }
-
-    .section-1-contact .fill-form-text{
-        position: absolute;
-        top:10%;
-    }
-    
-    .section-1-contact form{
-        position:absolute;
-        top:150%;
-        right:4%;
-        width: 900px;
-    }
-
-    .section-1-contact .form-content{
-
-        position: absolute;
-        right: -20%;
-    }
-
-    .section-1-contact form fieldset div{
-        margin-right: 10px;
-        margin-bottom: 20px;
-    }
-    
-    .section-1-contact form div:nth-child(odd){
-    
-        margin-left: 150px;
-    }
-    
-    .section-1-contact form div:nth-child(even){
-    
-        margin-left: -70px;
-    }
-
-    .section-1-contact form input,select{
-        height:61px;
-        width:280px;   
-    }
-
-    .section-1-contact form textarea{
-        width:600px;
-        height:140px;
-        margin-left: 60px;
-    }
-    
-    .section-1-contact form .textarea{
-        margin-left: 60px;
-    }
-
-    .section-1-contact form [type="submit"]{
-        display: block;
-        margin: 10px -10px 0;
-        width: 600px;;
-    }
-
-    .contact-footer img{
-        width:56px;
-        height:34.83px ;  
-        position: absolute;
-        bottom: 40%;
-    }
-    
-    .footer p{
-        font-family: var(--c-font);
-        position: relative;
-        left: 60%;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1.55em;
-        letter-spacing: 0.02em;
-    }
-    
-    .contact-footer p a{
-        color: white;
-    }
-
-    .contact-info .melbourne p span{
-
-        display: inline-block;
-    }
-    
-    .contact-info .sydney p span{
-    
-        display: inline-block;
-    }
-
-    .section-2-contact{
-        position: relative;
-        margin-left: 500px;
-        padding-top: 500px;
-        padding-bottom: 190px;
-    }
-
-    .section-2-contact h5{
-
-        display: inline; 
-        font-weight: bold;
-        font-family: var(--c-font);
-        margin-left: -400px;
-        position: absolute;
-        top:80%;
-        font-size: 16px;
-    }
-    
-    .section-2-contact img{
-        position: absolute;
-        top:80%;
-        width: 450px;
-    }
-
-    .section-1-contact .contact-info{
-
-        position: absolute;
-        top:1250%
-    }
-
-    .section-1-contact p[class="privacy"]{
-        margin-top: 35px;
-        text-align: center;
-        color: #eae9e7;
-        font-family: var(--c-font);
-        font-weight: 600;
-        position: absolute;
-        top:1080%;
-        right: 40%;
-    }
-    
-    .section-1-contact .terms{
-    
-        position: absolute;
-        bottom:-1000%;
-        right: 36%;
-        box-shadow: 5px 5px 8px 2px #888888;
-    }
- }
-
- @media (max-width: 840px) {
-
-    .section-1 .slide-show div h3:first-child{  
-        font-size: 32px;
-    }
-    
-    .section-1 .slide-show div h3:nth-child(2){
-        font-size: 20px;
-    }
-    
-    .section-1 .slide-show div h6{
-        font-size: 12px;
-    }
- }
-
- @media (max-width: 686px) {
-
-    .section-1 .slide-show div h3:first-child{  
-        font-size: 28px;
-    }
-    
-    .section-1 .slide-show div h3:nth-child(2){
-        font-size: 14px;
-    }
-    
-    .section-1 .slide-show div h6{
-        font-size: 12px;
-    }
- }
-
- @media (max-width: 765px) {
-
-    .section-1-contact h1{
-        font-size: 50px;
-        margin-top: 0px;
-        position: absolute;
-        top:0
-        
-    }
-    
-    .fill-form-text .span4{
-        display: inline-block;
-    }
-    
-    .section-1-contact h4{
-        font-weight: bold;
-        margin-top: 110px;
-        font-size: 16px;
-        font-weight: normal;
-    }
-    
-    .fill-form-text{
-        position: absolute;
-        top:0%;
-        left: 8%;
-    
-    }
+    }  
 
  }
- 
+  
  @media (max-width: 765px) {
   
     .header-navbar{
         display:none;
     }
-   
+    
     .head2{
         display:none;
     }
     .head3{
         display: block;
+    }
+
+    .fieldset1{
+        display: grid;
+        grid-template-columns: repeat(1, 8fr);
+        border: none;
+        margin-top: 5%;
+    }
+    
+    .fieldset1 div:nth-child(odd){
+
+        margin-left: 5%;
+    
+    }
+
+    .contact-info{
+        margin-top: 60%;
+        margin-left: 6%;
+    }
+
+    .contact-info p{
+        font-size: 12px;
+    }
+
+    .contact-info h5{
+        font-size: 16px;
+    }
+
+    .section-1-contact form{  
+        position: absolute;
+        left:11%;
+        top:80%;
+        width:81%;
+        height:370%;    
+    }
+
+    .section-2-contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: 45%;
+    }
+
+    .section-2-contact h5{
+        margin-left: -11%;
+    }
+
+    .section-2-contact img{
+        margin-top: 5%;
+        margin-left: -11%;
+    }
+
+    .contact-footer{
+        margin-top: 55%;
     }
 
     .header-content h1{
@@ -1133,11 +1031,6 @@ body{
         line-height: 1.55em;
         letter-spacing: 0.02em;
     }
-    
-    /* .section-2 button{
-        position: relative;
-        right: 70%;
-    } */
 
     .head3{
         
@@ -1145,124 +1038,22 @@ body{
     }
 }
 
-@media (max-width: 850px){  /* W                                          WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWwwww */
-
-    .section-1-contact{
-        position: relative;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 1400px;
-    }
-
-    .section-1-contact .contact-info{
-
-        position: absolute;
-        top:8100%;
-        left: 4%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-        font-family: var(--c-font);
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 1.55em;
-    }
-
-    .section-2-contact h5{
-
-        font-weight: bold;
-        font-family: var(--c-font);
-        margin-left: -470px;
-        position: absolute;
-        top:60%;
-        font-size: 14px;
-    }
-    
-    .section-2-contact img{
-        position: absolute;
-        top:70%;
-        width: 550px;
-        margin-left: -470px;
-    }
-
-    .contact-info .melbourne p {
-        
-        display: inline-block;
-    }
-    
-    .contact-info .sydney p {
-        font-weight: bold;
-        display: inline-block;
-    }
-
-    .section-1-contact form input,select{
-        height:61px;
-        width:400px;   
-    }
-
-    .section-1-contact form div:nth-child(odd){
-
-        margin-left: 110px;
-    
-    }
-    
-    .section-1-contact form div:nth-child(even){
-    
-        margin-left: 110px;
-    
-    }
-    
-    .section-1-contact form{
-        
-        width:550px;
-        height:1500.67px;
-    } 
-
-    .section-1-contact fieldset{
-        display: grid;
-        grid-template-columns: repeat(1,8fr);
-        border: none;
-        padding-bottom: 20px;
-        margin-left:-155px ;
-    }
-
-    .section-1-contact form textarea{
-        width:400px;
-        height:140px;
-        margin-left: -150px;
-    }
-    
-    .section-1-contact form .textarea{
-        margin-left: -150px;
-    }
-    
-    .section-1-contact form [type="submit"]{
-        display: block;
-        margin: 10px -45px 0;
-        width: 420px;;
-    }
-
-    .section-1-contact p[class="privacy"]{
-        margin-top: 35px;
-        text-align: center;
-        color: #eae9e7;
-        font-family: var(--c-font);
-        font-weight: 600;
-        position: absolute;
-        top:7300%;
-        right: 35%;
-    }
-    
-    .section-1-contact .terms{
-    
-        position: absolute;
-        bottom:-7200%;
-        right: 30%;
-        box-shadow: 5px 5px 8px 2px #888888;
+@media (max-width: 562px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
     }
 }
 
-@media (max-width: 845px) {
+@media (max-width: 404px){
+    .section-2 button{
+        position: absolute;
+        left: 4%;
+        width:100px
+    }
+}
+
+ @media (max-width: 845px) {
 
     .footer p{
         font-family: var(--c-font);
@@ -1283,29 +1074,15 @@ body{
         left: 20%;
     }
 
-    /* .section-2 button{
-        position: relative;
-        right: 110%;
-    } */
+} 
 
-}
-
-@media (max-width: 424px) {
+ @media (max-width: 424px) {
 
     .footer p{
 
         position: relative;
         left: 10%;
         font-size: 10px;
-    }
-
-    .contact-footer img{
-        width:56px;
-        height:34.83px ;  
-        position: absolute;
-        top: 20%;
-        left: 35%;
-        display: block;
     }
 
     .footer img{
@@ -1317,14 +1094,9 @@ body{
         display: block; 
     }
 
-    /* .section-2 button{
-        position: relative;
-        right: 160%;
-    } */
+} 
 
-}
-
-@media (max-width: 370px) {
+ @media (max-width: 370px) {
     .top3 #menu2{
         
         width: 10%;
@@ -1336,4 +1108,19 @@ body{
     .header-content button{
         width: 80px;
     }
-}
+} 
+
+/* @media screen and (max-width: 1200px)
+ {
+
+    .header-navbar .menu-logo img{
+        width: 58px;
+        height: 40px;
+        position: absolute;
+        top:23%;
+        right: 10%;
+        display: block;
+    }
+
+} */
+
