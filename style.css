@@ -17,21 +17,21 @@ body{
 .header-navbar {
     justify-content: center;
     position: relative;
-    padding-top: 20%;
+    padding-top: 12%;
     display: block;
     margin-right: -40px;
-    margin-top: 35px;
-    margin-bottom: -80px;
+    /* margin-top: 35px; */
+    /* margin-bottom: -80px; */
     z-index: 5;
 }
 
 .header-navbar .logo img {
-    height: 21%;
+    height: 38%;
     width: 21%;
     cursor: pointer;
     position: absolute;
-    top:20%;
-    left:5%;
+    top:64%;
+    left:3%;
 }
 
 .drop-down-menu{
@@ -49,7 +49,7 @@ body{
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 25%;
+    top: 73%;
     left: 37%;    
     justify-content: center;
     align-items: center;
@@ -110,15 +110,15 @@ body{
     background-color: white;
     border: 2px solid var(--d-color);
     outline: none;
-    width:158.52px;
-    height: 52px;
+    width:220.52px;
+    height: 62px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.55em;
     letter-spacing: 0.02em;
     position: absolute;
-    top:20%;
-    left:80%;
+    top:62%;
+    left:76%;
 }
 
 .btn-talk:hover{
@@ -381,15 +381,8 @@ animation-name: none;
     background-color: black;
     position: absolute;
     top:350%;
-    width: 180%;
-}
-
-.contact-footer p{
     color: white;
-}
-
-.contact-footer a{
-    color: white;
+    width: 200%;
 }
 
 .footer img{
@@ -415,12 +408,12 @@ animation-name: none;
     letter-spacing: 0.02em;
 }
 
-.contact-footer p a{
-    color: white;
-}
-
 .footer p a{
     color: var(--d-color);
+}
+
+#a{
+    color: white;
 }
 
 .section-2{
@@ -444,11 +437,13 @@ animation-name: none;
 
 .home-page-content{
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-1-contact{
    position: absolute;
-   top:5%;
+   /* top:5%; */
 }
 
 .fill-form-text{
@@ -475,7 +470,7 @@ animation-name: none;
 
 .section-1-contact form{   /*ok*/
     position: absolute;
-    left:65%;
+    left:82%;
     top:36%;
     width:81%;
     height:237%;     /*hok*/
@@ -815,6 +810,16 @@ animation-name: none;
     background-position: right center;
     background-size: 20px 10px;
 }
+
+.corr {
+    width: 90%;
+    height: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+
 
 /* ///////////////////////media */
 

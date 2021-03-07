@@ -24,8 +24,8 @@
 
             <div class="header-navbar">
 
-                <div class="" id="yathreb">
-                    <a href="home.html" class="logo">
+                <div >
+                    <a href="index.html" class="logo">
                         <img src="./images/logo.png">
                     </a>
                     
@@ -74,41 +74,41 @@
                 <h4>Fill out the form and we'll come to you, or give us a call to get in touch directly.</h4>
             </div>
 
-             <form>  
+             <form id="submit-form" onsubmit="totalCheck()">  
 
                 <div class="form-content">
                     <fieldset class="fieldset1">
                         <div>
                             <label>First name<span class="star">*</span></label>
-                            <input type= "name" class="firstName" type="text">
+                            <input type= "name" class="firstName" >
                         </div>
                         <div>
                             <label>Last name<span class="star">*</span></label>
-                            <input type="name" class="lastName" type="text">
+                            <input type="name" class="lastName" >
                         </div>
                         <div>
                             <label>Email<span class="star">*</span></label>
-                            <input type="email" class="email"t ype="text">
+                            <input type="email" class="email" > 
                         </div>
                         <div>
                             <label>Phone number<span class="star">*</span></label>
-                            <input class="phoneNumber" type="text" >
+                            <input class="phoneNumber" >
                         </div>
                         <div>
                             <label>Company name<span class="star">*</span></label>
-                            <input type="name" class="companyName" type="text">
+                            <input type="name" class="companyName" >
                         </div>
                         <div>
                             <label>Company website<span class="star">*</span></label>
-                            <input class="companyWebsite" type="text">
+                            <input class="companyWebsite" >
                         </div>
                         <div>
                             <label>Job title<span class="star">*</span></label>
-                            <input type="name" class="jobTitle" type="text">
+                            <input type="name" class="jobTitle" >
                         </div>
                         <div>
                             <label>Company size<span class="star">*</span></label>
-                            <select>
+                            <select id="employees"  >
                                 <option>Please select</option>
                                 <option>1-10 Employees</option>
                                 <option>1-50 Employees</option>
@@ -129,7 +129,7 @@
                             <textarea></textarea>
                         </div>
         
-                        <input class="btn btn-find" value="request a call back" type="submit">
+                        <input class="btn btn-find" id="request-btn" value="request a call back" type="submit">
 
                         <div class="terms">
                 
@@ -143,11 +143,8 @@
 
                         <p class="privacy">We respect your privacy</p>
                     </fieldset>
-
-                    
                     
                 </div>
-                
                
             </form>
 
@@ -185,7 +182,7 @@
 
         <footer class="footer contact-footer">
             <img src="./images/w-black.png">
-            <p >&copy; 2020 Webprofits. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+            <p >&copy; 2020 Webprofits. All Rights Reserved. <a href="#" id="a">Privacy Policy</a></p>
         </footer>
 
     </section>

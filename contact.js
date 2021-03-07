@@ -11,9 +11,77 @@ const phoneNumber = document.getElementsByClassName('phoneNumber')[0]
 const companyName = document.getElementsByClassName('companyName')[0]
 const companyWebsite = document.getElementsByClassName('companyWebsite')[0]
 const jobTitle = document.getElementsByClassName('jobTitle')[0]
+const employees = document.getElementById('employees')
+const request = document.getElementById("request-btn")
+const form = document.getElementById("submit-form")
 
-const user = [firstName, lastName, email, phoneNumber, companyName, companyWebsite, jobTitle];
+const contactInfo = [firstName, lastName, email, phoneNumber, companyName, companyWebsite, jobTitle, employees];
 
+const valName = /^[a-z ,.'-]+$/i;
+const valEmail =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const valPhoneNumber = /^\d{10}$/;
+const valcompanyWebsite = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+
+
+//Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking
+
+contactInfo.forEach((contactItem) => {
+
+   contactItem.onblur = function(contactItem){
+      if(contactItem.target === firstName || contactItem.target === lastName || contactItem.target === jobTitle || contactItem.target === companyName ) {
+         if(valName.test(contactItem.target.value)) {
+            contactItem.target.classList.remove("err")
+         } else {
+            contactItem.target.classList.add("err")
+         }
+      }
+   
+      if(contactItem.target === email) {
+         if(valEmail.test(contactItem.target.value)) {
+            contactItem.target.classList.remove("err")
+         } else {
+            contactItem.target.classList.add("err")
+         }
+      }
+
+      if(contactItem.target === phoneNumber) {
+         if(valPhoneNumber.test(contactItem.target.value)) {
+            contactItem.target.classList.remove("err")
+         } else {
+            contactItem.target.classList.add("err")
+         }
+      }
+
+      if(contactItem.target === companyWebsite) {
+         if(valcompanyWebsite.test(contactItem.target.value)) {
+            contactItem.target.classList.remove("err")
+         } else {
+            contactItem.target.classList.add("err")
+         }
+      }
+
+      if(contactItem.target === employees) {
+         if(employees.value === "Please select") {
+            employees.style.border = "1px solid red"
+         } else {
+            employees.style.border = "1px solid black"
+         }
+      }
+   }  
+
+}
+)
+
+////////
+
+// function employeesCheck() {
+//    if(employees.value == "Please select"){
+//       employees.style.border = "1px solid red"
+//    } else {
+//       employees.style.border = "1px solid black"
+//    }
+   
+// }
 
 //////////////////// drop-down-menu
    
@@ -36,83 +104,3 @@ function showblock() {
    homeContent.style.display = "none";
    dropmenu.style.height = "100%";
 }
-
-
-//Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking Error Checking
-firstName.onblur = function(e) {
-const valName = /^[a-z ,.'-]+$/i;
-
-   if(!valName.test(e.target.value)) {
-      firstName.classList.add('err')
-   } else {
-      firstName.classList.remove('err')
-   }
-}
-
-
-lastName.onblur = function(e) {
-const valName = /^[a-z ,.'-]+$/i;
-
-   if(!valName.test(e.target.value)) {
-      lastName.classList.add('err')
-   } else {
-      lastName.classList.remove('err')
-   }
-}
-
-email.onblur = function(e) {
-   const valEmail =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  
-   
-      if(!valEmail.test(e.target.value)) {
-         email.classList.add('err')
-      } else {
-         email.classList.remove('err')
-      }
-   }
-
-phoneNumber.onblur = function(e) {
-const valPhoneNumber = /^\d{10}$/;
-   
-   if(!valPhoneNumber.test(e.target.value)) {
-      phoneNumber.classList.add('err')
-   } else {
-      phoneNumber.classList.remove('err')
-   }
-}
-
-companyName.onblur = function(e) {
-const valcompanyName = /^[a-z ,.'-]+$/i;
-      
-   if(!valcompanyName.test(e.target.value)) {
-      companyName.classList.add('err')
-   } else {
-      companyWebsite.classList.remove('err')
-   }
-}
-
-companyWebsite.onblur = function(e) {
-const valcompanyWebsite = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
-         
-   if(!valcompanyWebsite.test(e.target.value)) {
-      companyWebsite.classList.add('err')
-   } else {
-      companyWebsite.classList.remove('err')
-   }
-}
-
-jobTitle.onblur = function(e) {
-   const valjobTitle = /^[a-z ,.'-]+$/i;
-            
-      if(!valjobTitle.test(e.target.value)) {
-         jobTitle.classList.add('err')
-      } else {
-         jobTitle.classList.remove('err')
-      }
-   }
-
-
-
-
-
-
